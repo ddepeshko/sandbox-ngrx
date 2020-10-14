@@ -2,7 +2,7 @@ import {EProductStatuses} from '@constants/product-statuses';
 import {IProduct} from '@models/product/product';
 import {PRODUCTS_LS_KEY} from "@constants/constants";
 
-export const PRODUCT_LIST_MOCK: Array<IProduct> = !!JSON.parse(localStorage.getItem(PRODUCTS_LS_KEY)).length ? JSON.parse(localStorage.getItem(PRODUCTS_LS_KEY)) : [
+export const PRODUCT_LIST_MOCK: Array<IProduct> = !!JSON.parse(localStorage.getItem(PRODUCTS_LS_KEY))?.length ? JSON.parse(localStorage.getItem(PRODUCTS_LS_KEY)) : [
   {
     id: 1,
     title: 'Продукт №1',

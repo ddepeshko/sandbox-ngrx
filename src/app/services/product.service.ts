@@ -6,7 +6,13 @@ import {IProduct} from '@models/product/product';
 import {api} from '@constants/api';
 import {Store} from "@ngrx/store";
 import {IProductsState} from "@models/product/products-state";
-import {AddProduct, DeleteProduct, LoadProductList, UpdateProduct} from "../store/actions/products.action";
+import {
+  AddProduct,
+  DeleteProduct,
+  LoadProductData,
+  LoadProductList,
+  UpdateProduct
+} from "../store/actions/products.action";
 import {Router} from "@angular/router";
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 
@@ -49,7 +55,9 @@ export class ProductService {
     return this.http.get<Array<IProduct>>(`${api.products.baseUrl}${api.products.productList}`);
   }
 
-  getProductData(id: number): Observable<IProduct> {
-    return this.http.get<IProduct>(`${api.products.baseUrl}${api.products.productActions}`.replace('{id}', String(id)));
+  getProductData(id: number): void {
+    this.http.get<IProduct>(`${api.products.baseUrl}${api.products.productActions}`.replace('{id}', String(id))).toPromise().then((data) => {
+      this.store$.dispatch(new LoadProductData(data))
+    });
   }
 }

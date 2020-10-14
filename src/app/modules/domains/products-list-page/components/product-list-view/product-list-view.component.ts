@@ -22,8 +22,4 @@ export class ProductListViewComponent implements OnInit {
     this.products$ = this.store$.select(selectProductsListItems);
   }
 
-
-  updateProductList() {
-    // this.getProductList();
-  }
 }

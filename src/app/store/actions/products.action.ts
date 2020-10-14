@@ -10,7 +10,8 @@ export enum PRODUCT_ACTIONS {
   ADD_PRODUCT = 'ADD_PRODUCT',
   UPDATE_PRODUCT = 'UPDATE_PRODUCT',
   DELETE_PRODUCT = 'DELETE_PRODUCT',
-  LOAD_PRODUCT_LIST = 'LOAD_PRODUCT_LIST'
+  LOAD_PRODUCT_LIST = 'LOAD_PRODUCT_LIST',
+  LOAD_PRODUCT_DATA = 'LOAD_PRODUCT_DATA'
 }
 
 export class AddProduct implements Action {
@@ -41,6 +42,13 @@ export class LoadProductList implements Action {
   }
 }
 
+export class LoadProductData implements Action {
+  readonly type = PRODUCT_ACTIONS.LOAD_PRODUCT_DATA;
+
+  constructor(public payload: IProduct) {
+  }
+}
+
 export class LoadAppProductsState implements Action {
   readonly type = EState_Actions.SET_STATE
 
@@ -49,4 +57,10 @@ export class LoadAppProductsState implements Action {
 }
 
 
-export type ProductActions = AddProduct | UpdateProduct | DeleteProduct | LoadProductList | LoadAppProductsState;
+export type ProductActions =
+  AddProduct
+  | UpdateProduct
+  | DeleteProduct
+  | LoadProductList
+  | LoadAppProductsState
+  | LoadProductData;

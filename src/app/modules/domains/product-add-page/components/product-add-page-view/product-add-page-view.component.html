@@ -50,6 +50,7 @@
             <label class="label" for="creationDate">Дата создания</label>
             <div class="input-group">
               <input #datepicker="ngbDatepicker"
+                     autocomplete="off"
                      [ngClass]="{'is-invalid': form.get('creationDate').touched && form.get('creationDate').invalid}"
                      class="form-control" formControlName="creationDate"
                      id="creationDate" name="datepicker" ngbDatepicker

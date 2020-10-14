@@ -35,6 +35,11 @@ export function productsReducer(state = initialState, action: ProductActions) {
         ...state,
         ...action.payload
       }
+    case PRODUCT_ACTIONS.LOAD_PRODUCT_DATA:
+      return {
+        ...state,
+        currentProduct: action.payload
+      }
     default:
       return state;
   }

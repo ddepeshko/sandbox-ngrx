@@ -1,6 +1,10 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 import {IProduct} from '@models/product/product';
+import {currentProduct} from "@app/store/selectors/product.selectors";
+import {Observable} from "rxjs";
+import {IProductsState} from "@models/product/products-state";
+import {Store} from "@ngrx/store";
 
 @Component({
   selector: 'app-product-view',
@@ -8,12 +12,13 @@ import {IProduct} from '@models/product/product';
   styleUrls: ['./product-view.component.scss']
 })
 export class ProductViewComponent implements OnInit {
-  @Input() productData: IProduct;
+  productData$: Observable<IProduct>;
 
-  constructor() {
+  constructor(private store$: Store<IProductsState>) {
   }
 
   ngOnInit(): void {
+    this.productData$ = this.store$.select(currentProduct);
   }
 
 }

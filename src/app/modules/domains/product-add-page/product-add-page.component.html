@@ -1,11 +1,26 @@
-<div class="page-title-wrapper">
-  <div class="row">
-    <div class="col-12">
-      <h1>{{productData ? 'Страница редактирования продукта' : 'Страница добавления продукта' }}</h1>
+<ng-container *ngIf="(productData$ | async) as productData; else createPage">
+  <div class="page-title-wrapper">
+    <div class="row">
+      <div class="col-12">
+        <h1>Страница редактирования продукта</h1>
+      </div>
     </div>
   </div>
-</div>
-<div class="main-content">
-  <app-product-add-page-view [productData]="productData"></app-product-add-page-view>
-</div>
+  <div class="main-content">
+    <app-product-add-page-view [productData]="productData"></app-product-add-page-view>
+  </div>
+</ng-container>
+<ng-template #createPage>
+  <div class="page-title-wrapper">
+    <div class="row">
+      <div class="col-12">
+        <h1>Страница добавления продукта</h1>
+      </div>
+    </div>
+  </div>
+  <div class="main-content">
+    <app-product-add-page-view></app-product-add-page-view>
+  </div>
+</ng-template>
+
 

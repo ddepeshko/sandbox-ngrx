@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {IProduct} from '@models/product/product';
 import {ActivatedRoute} from '@angular/router';
 import {ProductService} from '@services/product.service';
 import {IProductData} from '@models/product/product-data';
@@ -10,7 +9,6 @@ import {IProductData} from '@models/product/product-data';
   styleUrls: ['./product-view-page.component.scss']
 })
 export class ProductViewPageComponent implements OnInit, IProductData {
-  productData: IProduct;
   productId: number;
 
   constructor(private route: ActivatedRoute, private productService: ProductService) {
@@ -28,8 +26,6 @@ export class ProductViewPageComponent implements OnInit, IProductData {
   }
 
   getProductDataById() {
-    this.productService.getProductData(this.productId).subscribe((data) => {
-      this.productData = data;
-    });
+    this.productService.getProductData(this.productId)
   }
 }
