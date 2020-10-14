@@ -1,0 +1,59 @@
+@import "src/scss/variables";
+@import "src/scss/mixins";
+
+.product-item-wrapper {
+  position: relative;
+  border: 1px solid $product-item-border-color;
+  padding: 12px 8px;
+  @include trans();
+  height: 100%;
+  @include flex-container(column, space-between, flex-start);
+
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 12px 44px rgba(0, 0, 0, .05);
+  }
+}
+
+.item-image {
+  overflow: hidden;
+  @include flex-container(row, center, center);
+  height: 255px;
+}
+
+.item-title {
+  margin-top: 8px;
+
+  .title {
+    font-size: 16px;
+    font-weight: 500;
+
+  }
+}
+
+.item-status {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  z-index: 1;
+
+}
+
+.item-date {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  color: $text-secondary-color;
+}
+
+.controls-wrapper {
+  margin-top: 12px;
+  @include flex-container(row, space-between, center);
+  width: 100%;
+}
+
+:host {
+  display: block;
+  height: 100%;
+}

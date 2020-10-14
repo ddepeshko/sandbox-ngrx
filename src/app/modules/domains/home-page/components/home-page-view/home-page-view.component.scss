@@ -1,0 +1,12 @@
+@import "src/scss/mixins";
+
+:host {
+  @include flex-container(row, center, center);
+  height: 100%;
+
+  h3 {
+    font-size: 48px;
+  }
+}
+
+

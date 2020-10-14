@@ -1,0 +1,104 @@
+body {
+  color: $text-def-color;
+  font-weight: 400;
+  background: $body-bg-color;
+  font-family: $font-family-base;
+  font-size: 14px;
+  line-height: 1.15;
+}
+
+app-root {
+  display: block;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+app-root {
+  display: block;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  color: $text-def-color;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 26px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  vertical-align: middle;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.link,
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-color-hover;
+  }
+}
+
+.page-title-wrapper {
+  padding: 12px 0;
+}
+
+.main-content {
+  margin-top: 8px;
+  padding: 24px;
+  background: $white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 20px rgba(0, 0, 0, .02);
+  min-height: calc(100vh - 177px);
+}
+
+.container {
+
+  &.container-content {
+    padding-bottom: 24px;
+  }
+}

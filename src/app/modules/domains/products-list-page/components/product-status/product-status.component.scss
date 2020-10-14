@@ -1,0 +1,20 @@
+@import "src/scss/variables";
+
+.status-item {
+  padding: 2px 4px;
+  font-size: 10px;
+  color: $white;
+  font-weight: 700;
+
+  &.new {
+    background: $status-new-bg;
+  }
+
+  &.used {
+    background: $status-used-bg;
+  }
+
+  &.refurbished {
+    background: $status-ref-bg;
+  }
+}

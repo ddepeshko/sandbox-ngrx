@@ -1,0 +1,19 @@
+@import "src/scss/variables";
+@import "src/scss/mixins";
+
+:host {
+  @include flex-container(column, space-between, flex-start);
+}
+
+.head-title {
+  margin-bottom: 36px;
+}
+
+.submit-wrapper {
+  @include flex-container(row, flex-start, center);
+  margin: 0 -8px;
+
+  .btn-item {
+    padding: 0 8px;
+  }
+}

@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-12">
+    <div class="btn-go-back-wrapper">
+      <button class="btn btn-go-back" routerLink="../">
+        Назад
+      </button>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-md-3">
+    <div class="image-wrapper">
+      <div class="status">
+        <app-product-status [status]="productData?.status"></app-product-status>
+      </div>
+      <img [alt]="productData?.title" [src]="productData?.image">
+    </div>
+  </div>
+  <div class="col-12 col-md-9">
+    <div class="product-characteristics-wrapper">
+      <div class="product-characteristic product-id">
+        <span class="text">ID: {{productData?.id}}</span>
+      </div>
+      <div class="product-characteristic product-title">
+        <h3 class="text">{{productData?.title}}</h3>
+        <span class="subtitle">{{productData?.subtitle}}</span>
+      </div>
+      <div class="product-characteristic product-creation">
+        <span class="text">Дата выпуска: <span class="date">{{productData?.creationDate | date: 'dd MMM yyyy' }}</span></span>
+      </div>
+    </div>
+  </div>
+</div>

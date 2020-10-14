@@ -1,0 +1,16 @@
+<div class="modal-header">
+  <h4 class="modal-title">Вы действительно хотите удалить продукт ?</h4>
+  <button (click)="close()" aria-label="Close" class="close" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-footer">
+  <div class="submit-wrapper">
+    <div class="btn-item">
+      <button (click)="submitDeletion()" class="btn base-btn">Удалить</button>
+    </div>
+    <div class="btn-item">
+      <button (click)="close()" class="btn base-btn-revert">Отменить</button>
+    </div>
+  </div>
+</div>

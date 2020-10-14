@@ -1,0 +1,12 @@
+/* mixins */
+
+@mixin flex-container($flex-direction: row, $flex-position: flex-start, $align-position: center) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-position;
+  justify-content: $flex-position;
+}
+
+@mixin trans($time: 0.3, $delay: ease-in-out) {
+  transition: all $time + s $delay;
+}

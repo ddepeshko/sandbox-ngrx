@@ -1,0 +1,10 @@
+@import "src/scss/mixins";
+
+.submit-wrapper {
+  @include flex-container(row, flex-start, center);
+  margin: 0 -8px;
+
+  .btn-item {
+    padding: 0 8px;
+  }
+}

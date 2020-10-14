@@ -1,0 +1,31 @@
+<div class="header-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-9">
+        <nav class="navigation">
+          <ul class="links-wrapper">
+            <li class="link-item">
+              <a class="link" routerLink="home" routerLinkActive="active">Главная</a>
+            </li>
+            <li class="link-item">
+              <a class="link" routerLink="product-list" routerLinkActive="active">Товары</a>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="dropdown-wrapper" ngbDropdown>
+          <button class="btn btn-dropdown" id="dropdownHeader" ngbDropdownToggle>
+            <span class="text">Доп. возможности</span>
+            <span [inlineSVG]="'assets/imgs/dropdown-icon.svg'" class="icon"></span>
+          </button>
+          <div aria-labelledby="dropdownHeader" ngbDropdownMenu>
+            <span ngbDropdownItem routerLink="home" routerLinkActive="active">Вернуться на главную</span>
+            <span ngbDropdownItem routerLink="add-product" routerLinkActive="active">Создать продукт</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

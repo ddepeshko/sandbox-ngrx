@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'FiraSans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Fira Sans Light'), local('FiraSans-Light'),
+  url('~src/assets/fonts/fira-sans-v10-latin_cyrillic-300.woff2') format('woff2'),
+  url('~src/assets/fonts/fira-sans-v10-latin_cyrillic-300.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'FiraSans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fira Sans Regular'), local('FiraSans-Regular'),
+  url('~src/assets/fonts/fira-sans-v10-latin_cyrillic-regular.woff2') format('woff2'),
+  url('~src/assets/fonts/fira-sans-v10-latin_cyrillic-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'FiraSans';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Fira Sans Medium'), local('FiraSans-Medium'),
+  url('~src/assets/fonts/fira-sans-v10-latin_cyrillic-500.woff2') format('woff2'),
+  url('~src/assets/fonts/fira-sans-v10-latin_cyrillic-500.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'FiraSans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Fira Sans Bold'), local('FiraSans-Bold'),
+  url('~src/assets/fonts/fira-sans-v10-latin_cyrillic-700.woff2') format('woff2'),
+  url('~src/assets/fonts/fira-sans-v10-latin_cyrillic-700.woff') format('woff');
+}

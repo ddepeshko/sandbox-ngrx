@@ -1,0 +1,18 @@
+<div class="product-item-wrapper">
+  <div class="product-item-wrapper-inner">
+    <div [routerLink]="['/product-list', itemData?.id]" class="item-image">
+      <img [src]="itemData?.image" alt="product image">
+    </div>
+    <div [routerLink]="['/product-list', itemData?.id]" class="item-title">
+      <span class="title">{{itemData?.title}}</span>
+    </div>
+    <div class="item-status">
+      <app-product-status [status]="itemData?.status"></app-product-status>
+    </div>
+    <div class="item-date">{{itemData?.creationDate | date: 'dd MMM yyyy' }}</div>
+  </div>
+  <div class="controls-wrapper">
+    <div (click)="openAcceptanceModal(itemData?.id)" class="btn btn-delete" ngbTooltip="Удалить продукт"></div>
+    <div (click)="editProduct(itemData?.id)" class="btn btn-edit" ngbTooltip="Редактировать продукт"></div>
+  </div>
+</div>

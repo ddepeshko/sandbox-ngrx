@@ -1,0 +1,39 @@
+@import "src/scss/variables";
+@import "src/scss/mixins";
+
+.product-characteristic {
+  & + .product-characteristic {
+    margin-top: 8px;
+  }
+
+  &.product-id {
+    color: $text-secondary-color;
+    font-size: 12px;
+  }
+
+  &.product-title {
+    h3 {
+      font-size: 24px;
+    }
+
+    .subtitle {
+      font-max-size: 16px;
+      color: $text-secondary-color;
+    }
+  }
+
+  &.product-creation {
+    font-size: 14px;
+    font-weight: 600;
+
+    .date {
+      color: $text-secondary-color;
+
+      font-weight: 400;
+    }
+  }
+}
+
+.btn-go-back-wrapper {
+  margin-bottom: 24px;
+}

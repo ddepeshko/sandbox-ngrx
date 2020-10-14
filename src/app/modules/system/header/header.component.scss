@@ -1,0 +1,33 @@
+@import "src/scss/variables";
+@import "src/scss/mixins";
+
+.header-wrapper {
+  padding: 12px 0;
+  background: $header-bg-color;
+  box-shadow: 0 12px 44px rgba(0, 0, 0, 0.1);
+}
+
+.navigation {
+  @include flex-container(row, flex-start, center);
+  height: 100%;
+}
+
+.links-wrapper {
+  @include flex-container(row, flex-start, center);
+  margin: 0 -24px;
+
+  .link {
+    display: block;
+    padding: 0 24px;
+    font-size: 18px;
+    font-weight: 500;
+
+    &.active {
+      color: $link-active-color;
+    }
+  }
+}
+
+.dropdown-wrapper {
+  text-align: right;
+}
