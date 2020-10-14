@@ -4,7 +4,7 @@ import {select, Store} from "@ngrx/store";
 import {filter} from "rxjs/operators";
 
 import {PRODUCTS_LS_KEY} from "@constants/constants";
-import {selectProductsListItems} from "@app/store/selectors/product.selectors";
+import {currentProduct, selectProductsListItems} from "@app/store/selectors/product.selectors";
 import {LoadAppProductsState} from "@app/store/actions/products.action";
 
 @Injectable({
@@ -23,9 +23,11 @@ export class DataSyncStorageService {
 
     this.loadFromStorage();
     this.store$.pipe(select(selectProductsListItems), filter((state) => !!state)).subscribe((data) => {
-      localStorage.setItem(PRODUCTS_LS_KEY, JSON.stringify(data));
+      localStorage.setItem(PRODUCTS_LS_KEY, JSON.stringify({productsList: data}));
     });
-
+    this.store$.pipe(select(currentProduct), filter((state) => !!state)).subscribe((data) => {
+      localStorage.setItem(PRODUCTS_LS_KEY, JSON.stringify({currentProduct: data}));
+    });
     this.isInit = true;
   }
 
